@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: #F2EFEE;
+    border-top: 5px solid black;
+}
+
+.brand{
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
+.products a{
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.wish{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.wish:hover{
+    color:grey;
+}
+.products a:hover{
+    color:grey;
+}
