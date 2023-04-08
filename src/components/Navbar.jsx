@@ -3,7 +3,7 @@ import "../design/styleNavbar.css"
 const Navbar = () =>{
     return (
         <div className="navbar">
-                <p className="brand">Outstock&#8482;</p>
+                <a className="brand" href="..\e-commerce-app\src\App.jsx">Outstock&#8482;</a>
                 <div className="products">
                     <a href="#">Home</a>
                     <a href="#">Produse</a>

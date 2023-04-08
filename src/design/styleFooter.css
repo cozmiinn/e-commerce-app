@@ -1,18 +1,41 @@
 .footer{
     background-color: #292c2f;
 }
-a.social {
+.social a {
     margin: 0 1rem;
     transition: transform 250ms;
     display: inline-block;
     color: white;
     background-color: #33383b;
+    float: right;
+    position: relative;
 }
 
+.social a:hover{
+    color:grey;
+}
 .companyName{
-    color: white;
+    color: grey;
+    margin-top: 30px;
 }
 
-/*a.social:hover {*/
-/*    transform: translateY(-2px);*/
-/*}*/
+.utilLinks{
+    display: flex;
+    color:white;
+    font-weight: bold;
+}
+
+.utilLinks a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+}
+
+.footer{
+    padding: 3rem;
+}
+.csz{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}

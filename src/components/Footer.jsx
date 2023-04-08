@@ -2,9 +2,9 @@ import React from 'react';
 import "../design/styleFooter.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faFacebook,
+    faFacebookF,
     faTwitter,
-    faLinkedin,
+    faLinkedinIn,
     faGithub
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -12,25 +12,25 @@ import {
 const Footer = () => {
     return (
         <div className="footer">
+        <div className="csz">
             <div className="utilLinks">
-                <li>
                     <a href="#">Home</a>
                     <p>-</p>
                     <a href="#">Produse</a>
-                </li>
             </div>
             <div className="social">
-            <a href="#"
+            <a href="https://www.facebook.com/cozmiinn/"
                className="facebook social">
-                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                <FontAwesomeIcon icon={faFacebookF} size="2x" />
+            </a>
+                <a href="#" className="linkedin social">
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x"/>
             </a>
                 <a href="#"
                    className="twitter social">
                     <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
-                <a href="#" className="linkedin social">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x"/>
-                </a>
+
                 <a href="#"
                 className="github social">
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
@@ -41,6 +41,7 @@ const Footer = () => {
             <div className="companyName">
                 <p>Outstock &copy; 2023</p>
             </div>
+        </div>
         </div>
 
     );
