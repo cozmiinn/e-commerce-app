@@ -1,6 +1,9 @@
 .footer{
     background-color: #292c2f;
+    padding: 3rem;
 }
+
+/*social media*/
 .social a {
     margin: 0 1rem;
     transition: transform 250ms;
@@ -9,16 +12,41 @@
     background-color: #33383b;
     float: right;
     position: relative;
+    /*padding: 7px 0px 0px 7px; !*top, right, butoom, left*!*/
+    height: 40px;
+    width: 40px;
+    font-size: 12px;
 }
 
 .social a:hover{
     color:grey;
 }
+
+.facebook-social{
+    padding-left: 12px;
+    padding-top: 7px;
+}
+.linkedin-social{
+    padding-left: 9px;
+    padding-top: 7px;
+}
+
+.twitter-social{
+    padding-left: 6px;
+    padding-top: 7px;
+}
+.github-social{
+    padding-left: 6.5px;
+    padding-top: 7px;
+}
+
+/*company name*/
 .companyName{
     color: grey;
     margin-top: 30px;
 }
 
+/*links*/
 .utilLinks{
     display: flex;
     color:white;
@@ -32,9 +60,6 @@
     font-weight: bold;
 }
 
-.footer{
-    padding: 3rem;
-}
 .csz{
     margin-left: 10rem;
     margin-right: 10rem;
