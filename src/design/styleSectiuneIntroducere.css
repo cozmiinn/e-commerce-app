@@ -1,27 +1,38 @@
-.container{
+.container {
     width: 700px;
     float: left;
 }
-p{
+
+p {
     color: dimgrey;
     font-family: Corbel;
 }
-h1{
+
+h1 {
     font-family: Corbel;
     font-weight: bold;
     color: #292c2f;
-
 }
 
-.info{
+.info {
     padding: 30px;
     margin-left: 140px;
     margin-top: 80px;
-
 }
 
-.button{
+.button {
     margin-top: 15px;
     background-color: transparent;
     color: #292c2f;
+    padding: 7px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: inset 300px 0 0 0 #292c2f;
+    color: white;
+}
+
+.scaun {
+    margin: auto;
 }

@@ -1,6 +1,11 @@
+
 .navbar{
     background-color: #F2EFEE;
     border-top: 5px solid black;
+    width: 100%;
+    overflow: hidden;
+
+
 }
 
 .brand{
@@ -12,7 +17,13 @@
     color: black;
     font-weight: 900;
     font-size: 30px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+.brand:hover {
+    box-shadow: inset 300px 0 0 0 #292c2f;
+    color: white;
+}
+
 
 .products{
     display: flex;

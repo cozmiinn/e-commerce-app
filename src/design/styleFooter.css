@@ -51,6 +51,7 @@
     display: flex;
     color:white;
     font-weight: bold;
+    gap:3px;
 }
 
 .utilLinks a{

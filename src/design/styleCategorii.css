@@ -1,0 +1,47 @@
+.container-images{
+    height: 100%;
+
+}
+.images{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+li{
+    list-style: none;
+}
+
+.h3text{
+    font-size: 12px;
+}
+.unLI {
+    display: inline-block;
+    align-items: center;
+    width: 300px;
+    margin-left: 100px;
+
+}
+.details{
+    white-space: pre-line;
+    width: 150px;
+}
+
+.side {
+    flex: 1;
+    padding: 15px;
+}
+
+.side-content-center {
+    display: flex;
+    align-items: center;
+}
+.randuri{
+    color: grey;
+    text-decoration: none;
+    list-style: none;
+    font-size: 10px;
+}
+.randuri:hover{
+    color: grey;
+}

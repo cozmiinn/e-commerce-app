@@ -1,0 +1,57 @@
+.container-4{
+    width: auto;
+    height: auto;
+    margin-right: 180px;
+    margin-left: 160px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.imagini {
+    text-align: center;
+}
+
+.imagini img {
+    width: auto;
+    max-width: 100%;
+    height: 200px;
+}
+
+.title .prize {
+    display: flex;
+    align-items: center;
+}
+
+.h3_text_title {
+    display: inline-block;
+    margin: auto;
+    font-size: 15px;
+    color: dimgrey;
+}
+
+.h3_text_prizes{
+    display: inline-block;
+    margin: 0;
+    font-size: 15px;
+    color:#33383b;
+}
+
+@media screen and (min-width: 480px) {
+    .container-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
