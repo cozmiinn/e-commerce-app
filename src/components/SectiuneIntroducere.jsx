@@ -10,7 +10,7 @@ function SectiuneaIntroducere() {
                     <h1>Drop Chair</h1>
                     <h1>The Black Leather Edition</h1>
                     <p>The Drop&#8482; chair was designed by Arne Jacobsen in 1958 as part of his masterpiece, the legendary Radisson Blue Royal Hotel in Copenhagen.</p>
-                    <a href="http://google.com" >
+                    <a href="/produse" >
                         {/*target="_blank" rel="noopener noreferrer" - iti deschide un nou tab catre link-ul setat*/}
                     <button className="button" type="button">Discover now</button>
                 </a>

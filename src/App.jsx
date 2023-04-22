@@ -1,23 +1,27 @@
 import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Trending from "./components/Trending";
-import SectiuneaIntroducere from "./components/SectiuneIntroducere";
-import Categorii from "./components/Categorii";
-// import ImaginiMainPage from "./components/ImaginiMainPage";
+import Home from './pages/home';
+import Produse from './pages/produse';
+import WishList from './pages/wishlist';
 
 
 
 const App = () => {
     return (
         <>
+            <Router>
                 <Navbar/>
-                <SectiuneaIntroducere/>
-                <Categorii/>
-                <Trending/>
+                <Routes>
+                    <Route exact path='/home' exact element={<Home/>}/>
+                    <Route exact path='/produse' exact element={<Produse/>}/>
+                    <Route exact path='/wishlist' exact element={<WishList/>}/>
+                </Routes>
                 <Footer/>
+            </Router>
         </>
     );
 };

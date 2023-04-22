@@ -23,7 +23,7 @@ const Footer = () => {
                className="facebook-social">
                 <FontAwesomeIcon icon={faFacebookF} size="2x" />
             </a>
-                <a href="#" className="linkedin-social">
+                <a href="https://www.linkedin.com/in/cosmin-mihalescul-4382b6188/" className="linkedin-social">
                 <FontAwesomeIcon icon={faLinkedinIn} size="2x"/>
             </a>
                 <a href="#"
@@ -31,7 +31,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
 
-                <a href="#"
+                <a href="https://github.com/cozmiinn"
                 className="github-social">
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
                 </a>
