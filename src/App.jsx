@@ -16,7 +16,8 @@ const App = () => {
             <Router>
                 <Navbar/>
                 <Routes>
-                    <Route exact path='/home' exact element={<Home/>}/>
+                    <Route path='' exact element={<Home/>}/>
+                    <Route path='/home' exact element={<Home/>}/>
                     <Route exact path='/produse' exact element={<Produse/>}/>
                     <Route exact path='/wishlist' exact element={<WishList/>}/>
                 </Routes>

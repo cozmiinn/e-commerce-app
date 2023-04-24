@@ -1,8 +1,8 @@
-.footer{
+.footer {
+    margin-top: auto;
     background-color: #292c2f;
     padding: 3rem;
 }
-
 /*social media*/
 .social a {
     margin: 0 1rem;

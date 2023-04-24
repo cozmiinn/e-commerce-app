@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import Product from '../components/Product.jsx';
+import '../design/styleProdusePage.css';
 
 function Produse() {
     const [products, setProducts] = useState([]);
     const [filtered, setFiltered] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchWord, setWordSearch] = useState('');
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -25,33 +26,34 @@ function Produse() {
     }, [selectedCategory, products]);
 
     useEffect(() => {
-        if (searchTerm) {
+        if (searchWord) {
             setFiltered(
                 products.filter(
                     (product) =>
-                        product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        product.description.toLowerCase().includes(searchTerm.toLowerCase())
+                        product.title.toLowerCase().includes(searchWord.toLowerCase()) ||
+                        product.description.toLowerCase().includes(searchWord.toLowerCase())
                 )
             );
         } else {
             setFiltered(products);
         }
-    }, [searchTerm, products]);
+    }, [searchWord, products]);
 
     function handleCategorySelect(category) {
         setSelectedCategory(category);
     }
 
     function handleSearch(event) {
-        setSearchTerm(event.target.value);
+        setWordSearch(event.target.value);
     }
 
     const categories = Array.from(new Set(products.map((product) => product.category)));
         // .map((category) => category.charAt(0).toUpperCase() + category.slice(1)); - nu mai aduce datele din api
 
     return (
-        <div className="product-page">
-            <div className="category-list">
+
+        <div className="float-container">
+            <div className="float-child1">
                 <ul>
                     <a key="all" onClick={() => handleCategorySelect('')}>
                     </a>
@@ -63,16 +65,18 @@ function Produse() {
                     ))}
                 </ul>
             </div>
-            <div className="product-list">
+            <div className="float-child2">
                 <div className="search-bar">
                     <input type="text" placeholder="Caută produs" onChange={handleSearch} />
                 </div>
                 <ul>
+                    <div className="container-6">
                     {filtered.map((product) => (
                         <li key={product.id}>
                             <Product product={product} />
                         </li>
                     ))}
+                    </div>
                 </ul>
             </div>
         </div>

@@ -25,3 +25,9 @@ h1{
     background-color: transparent;
     color: #292c2f;
 }
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
