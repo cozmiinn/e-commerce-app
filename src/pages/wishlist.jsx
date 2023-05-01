@@ -8,69 +8,63 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import axios from 'axios';
+import {deleteWish, getWishlist} from "../services/wishlistFunctions";
 
-const Wishlist= ()=>{
-    return(
+function Wishlist() {
+    const wishlist = getWishlist();
+
+    const handleDeleteFromWish=(product)=>{
+        deleteWish(product);
+    }
+
+    return (
         <>
-            <img
-                className="back"
-                src={background} alt="wish"/>
+            <img className="back" src={background} alt="wish"/>
             <div className="centered">
                 <p>Wishlist</p>
                 <div className="a-text">
-            <a href="/home">Home</a>
-            <p> / </p>
-            <a href="/produse">Produse</a>
+                    <a href="/home">Home</a>
+                    <p> / </p>
+                    <a href="/produse">Produse</a>
                 </div>
             </div>
-
-
-            <div className="container-10">
                 <TableContainer component={Paper}>
-                    <Table sx={{minWidth: 650}} arial-labe="simple table">
+                    <div className="container-13">
+                    <Table className="tabletable" sx={{ minWidth: 650 }} arial-labe="simple table">
                         <TableHead>
                             <TableRow>
                                 <TableCell></TableCell>
-                                <TableCell></TableCell>
+                                <TableCell>ID</TableCell>
+                                <TableCell>Image</TableCell>
                                 <TableCell>Product name</TableCell>
-                                <TableCell>Price</TableCell>
+                                <TableCell>Unit price</TableCell>
+                                <TableCell></TableCell>
                                 <TableCell></TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
+                            {wishlist.map((product) => (
+                                <TableRow key={product.id}>
+                                    <TableCell></TableCell>
+                                    <TableCell>{product.id}</TableCell>
+                                    <TableCell>
+                                        <img className="imagesTable" src={product.image} alt={product.title}/>
+                                    </TableCell>
+                                    <TableCell>{product.title}</TableCell>
+                                    <TableCell>${product.price}</TableCell>
+                                    <TableCell>
+                                        <button className="buttonDelete" onClick={()=>handleDeleteFromWish(product)}>Delete</button>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
                             <TableRow>
-                                <TableCell>nu</TableCell>
-                                <TableCell>ms</TableCell>
-                                <TableCell>hello</TableCell>
-                                <TableCell>e ok</TableCell>
-                                <TableCell>sa zicem</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>nu</TableCell>
-                                <TableCell>ms</TableCell>
-                                <TableCell>hello</TableCell>
-                                <TableCell>e ok</TableCell>
-                                <TableCell>sa zicem</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>nu</TableCell>
-                                <TableCell>ms</TableCell>
-                                <TableCell>hello</TableCell>
-                                <TableCell>e ok</TableCell>
-                                <TableCell>sa zicem</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>nu</TableCell>
-                                <TableCell>ms</TableCell>
-                                <TableCell>hello</TableCell>
-                                <TableCell>e ok</TableCell>
-                                <TableCell>sa zicem</TableCell>
+
                             </TableRow>
                         </TableBody>
                     </Table>
+                    </div>
                 </TableContainer>
-            </div>
+
         </>
     )
 };

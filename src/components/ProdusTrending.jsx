@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import "../design/styleProdus.css"
+import "../design/styleProdusTrending.css"
 import axios from "axios";
 
-function Produs(){
+function ProdusTrending(){
     const [trendings, setTrending] = useState([]);
 
     useEffect(()=>{
@@ -33,4 +33,4 @@ function Produs(){
     )
 }
 
-export default Produs;
+export default ProdusTrending;

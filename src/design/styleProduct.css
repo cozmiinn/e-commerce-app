@@ -12,3 +12,20 @@
     display: flex;
     align-items: center;
 }
+
+.addToWish{
+    color:darkblue;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.addToWish:hover{
+    color:blue;
+}
+
+.theSameLine{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}

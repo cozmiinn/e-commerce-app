@@ -33,7 +33,23 @@
     text-align: center;
 }
 
-.container-10{
-    border: 1px solid darkgrey;
-    margin: 100px 300px 100px 300px;
+.imagesTable{
+    width: 50px;
+
+}
+
+.container-13{
+    max-width: 1000px;
+}
+
+.buttonDelete{
+    background-color: orangered;
+    color: white;
+    width: 7em;
+    border: none;
+}
+
+.tabletable{
+    align-content: center;
+    margin-top: 30px;
 }

@@ -14,9 +14,9 @@ const Footer = () => {
         <div className="footer">
         <div className="csz">
             <div className="utilLinks">
-                    <a href="#">Home</a>
+                    <a href="/home">Home</a>
                     <p> - </p>
-                    <a href="#">Produse</a>
+                    <a href="/produse">Produse</a>
             </div>
             <div className="social">
             <a href="https://www.facebook.com/cozmiinn/"

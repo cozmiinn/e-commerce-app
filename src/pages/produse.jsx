@@ -18,26 +18,24 @@ function Produse() {
     }, []);
 
     useEffect(() => {
-        if (selectedCategory) {
-            setFiltered(products.filter((product) => product.category === selectedCategory));
-        } else {
-            setFiltered(products);
-        }
-    }, [selectedCategory, products]);
+        let filteredProducts = products;
 
-    useEffect(() => {
-        if (searchWord) {
-            setFiltered(
-                products.filter(
-                    (product) =>
-                        product.title.toLowerCase().includes(searchWord.toLowerCase()) ||
-                        product.description.toLowerCase().includes(searchWord.toLowerCase())
-                )
-            );
-        } else {
-            setFiltered(products);
+        if (selectedCategory) {
+            filteredProducts = filteredProducts.filter(
+                (product) =>
+                    product.category === selectedCategory);
         }
-    }, [searchWord, products]);
+
+        if (searchWord) {
+            filteredProducts = filteredProducts.filter(
+                (product) =>
+                    product.title.toLowerCase().includes(searchWord.toLowerCase())
+            );
+        }
+
+        setFiltered(filteredProducts);
+    }, [selectedCategory, searchWord, products]);
+
 
     function handleCategorySelect(category) {
         setSelectedCategory(category);
@@ -48,16 +46,17 @@ function Produse() {
     }
 
     const categories = Array.from(new Set(products.map((product) => product.category)));
-        // .map((category) => category.charAt(0).toUpperCase() + category.slice(1)); - nu mai aduce datele din api
+    // .map((category) => category.charAt(0).toUpperCase() + category.slice(1)); - nu mai aduce datele din api
 
     return (
 
         <div className="float-container">
-            <div className="float-child1">
+            <div className="float-child-left">
                 <ul>
-                    <a key="all" onClick={() => handleCategorySelect('')}>
-                    </a>
                     <h2>Product Categories</h2>
+                    <a key="all" onClick={() => handleCategorySelect('')}>
+                        <li>all</li>
+                    </a>
                     {categories.map((category) => (
                         <li key={category} onClick={() => handleCategorySelect(category)}>
                             {category}
@@ -65,19 +64,21 @@ function Produse() {
                     ))}
                 </ul>
             </div>
-            <div className="float-child2">
-                <div className="search-bar">
-                    <input type="text" placeholder="Caută produs" onChange={handleSearch} />
+            <div className="float-child-right">
+                <form className="nosubmit">
+                    <input className="nosubmit" type="search" placeholder="Search.." onChange={handleSearch} />
+                </form>
+                <div className="allProducts">
+                    <ul>
+                        <div className="container-6">
+                            {filtered.map((product) => (
+                                <li key={product.id}>
+                                    <Product product={product} />
+                                </li>
+                            ))}
+                        </div>
+                    </ul>
                 </div>
-                <ul>
-                    <div className="container-6">
-                    {filtered.map((product) => (
-                        <li key={product.id}>
-                            <Product product={product} />
-                        </li>
-                    ))}
-                    </div>
-                </ul>
             </div>
         </div>
     );

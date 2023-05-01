@@ -1,6 +1,6 @@
 import React from "react";
 import "../design/styleTrending.css";
-import Produs from "./Produs";
+import ProdusTrending from "./ProdusTrending";
 
 
 function Trending(){
@@ -10,7 +10,7 @@ function Trending(){
             <h1 className="divider line one-line">Trending Products</h1>
             <h2 className="smaller">Mirum est notare quam littera gothica quam nunc putamus parum claram</h2>
         </div>
-        <Produs/>
+        <ProdusTrending/>
         </>
     )
 }
