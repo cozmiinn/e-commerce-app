@@ -30,7 +30,7 @@ function Wishlist() {
             </div>
                 <TableContainer component={Paper}>
                     <div className="container-13">
-                    <Table className="tabletable" sx={{ minWidth: 650 }} arial-labe="simple table">
+                    <Table className="center" sx={{ minWidth: 650 }} arial-labe="simple table">
                         <TableHead>
                             <TableRow>
                                 <TableCell></TableCell>
@@ -67,6 +67,6 @@ function Wishlist() {
 
         </>
     )
-};
+}
 
 export default Wishlist;
